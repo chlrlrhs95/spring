@@ -1,0 +1,34 @@
+하이퍼미디어.
+
+클라이언트에서 서버에 접근할때는 서버에 정의된 호출맵핑을 알아야한다.
+하지만 하이퍼미디어를 이용하면 클라이언트에서 그러한 걸 알 필요가 없게된다. 즉 하드코딩을 할 이유 또한 없어지게된다.
+
+타코리스트를 요청하는 url이 GET : ---/design/recent 라 할때
+그 리스트의 각각의 요소에 접근하는 url을 우리는 각각 지정해 줘야한다. 그리고 클라이언트에서 또한 각각 하드코딩을통해 접근해야한다.
+
+하지만 하이퍼미디어를 통해 우리는 이것을 해결할 수 있다.
+
+Resources : 컬렉션
+Resources : 오브젝트
+
+
+List<Object>의 데이터를 반환하는 형식이었다면 --> Resources<Resource<Object>> 이런식으로 변경하면된다.
+.wrap( )을 통해 Resources로 감쌀수있다.
+
+ControllerLinkBuilder를 통해 localhost:8080 호스트를 알수있고.
+.toLink(~~~.class)를 통해 해당 클래스에 대한 requestMapping을 알 수 있다.
+.slash("ABC")를 통해 /ABC 형식으로 마무리 할 수 있다.
+.withRel("ABC")을 통해 클라이언트에서 사용할 수 있도록하자.
+
+class의 requestmapping이 design이라 할때
+localhost:8080/design/ABC 의 url이 완성된다.
+
+클라이언트에서는 ABC링크에 접근하면 위의 url로 이동하게 될 것이다.
+
+Resource객체화 하기위해
+class TacoResource
+extends ResourceSupport
+
+이후 반복문 없이 링크를 추가해주기위해
+class TacoResourceAssembler
+extends ResourceAssemblerSupport<Taco, TacoResource>

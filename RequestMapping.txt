@@ -1,0 +1,11 @@
+RequestMapping()
+
+value : 맵핑 url
+produces : 요청헤더의 content-type
+consumes : 요청헤더의 accecpt
+
+content-type?
+A라는 요청은 content-type에 명시된 형식으로 요청을 보낸다. 즉 요청형식.
+
+accept?
+A라는 요청은 accept에 명시된 형식으로 응답받길 바란다. 즉 응답형식
