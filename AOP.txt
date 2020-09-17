@@ -1,0 +1,9 @@
+AOP : Aspect Oriented Programming / 관점지향프로그래밍
+
+Aspect : 부가적인 기능들 즉, 모듈.
+Target : Aspect가 적용되는 곳(Class, method 등등)
+Advice : 부가적인 기능을 담은 구현체.
+JointPoint : Advice가 어디에 적용될 것인가. 시점, 위치 등등
+PointCut : JointPoint이 상세 스펙을 정의한것. 
+	ㄴ> ex)" 'A'라는 메서드의 진입시점에 호출될것 " 같은 구체적지점.
+
